@@ -5,6 +5,6 @@ from appcoder.views import*
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("appcoder/",include("appcoder.urls"))
+    path("",include("appcoder.urls"))
    
  ]

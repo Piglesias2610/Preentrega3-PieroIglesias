@@ -6,10 +6,10 @@ from django.shortcuts import HttpResponse
 def inicio(request):
     return render(request,"appcoder/inicio.html")
 def estudiante(request):
-    return render(request,"appcider/cursos.html")
+    return ("Vista de estudiantes")
 def profesor(request):
     return HttpResponse("Vista de profesores")
 def cursos(request):
-    return HttpResponse("Vista de los cursos")
+    return render (request,"appcoder/cursos.html")
 def entregable(request):
     return HttpResponse("Vista de los entregables")
