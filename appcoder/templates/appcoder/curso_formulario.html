@@ -1,0 +1,16 @@
+{% extends 'appcoder/base.html' %}
+{% load static %}
+
+
+
+{% block titulo %} CoderHouse/Formulario{% endblock %}
+
+
+{% block contenidoQueCambia %}
+    <form action="curso-formulario" method="POST">
+        {% csrf_token %}
+        <p>Curso: <input type="text" name="curso"></p>
+        <p>Comision: <input type="text" name="comision"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock  %}

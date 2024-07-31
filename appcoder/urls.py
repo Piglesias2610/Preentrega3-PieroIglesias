@@ -5,10 +5,13 @@ urlpatterns=[
  
     path ('', inicio,name="inicio"),
     path('pagina-estudiantes', estudiante,name="estudiantes"),
-    path('pagina-profesores',profesor,name="profes"),
-    path('pagina-curso',cursos, name="cursos"),
-    path('pagina-entregable', entregable,name="entregables")
- ]
+    path('profesor-formulario',profesor,name="profes"),
+    path('curso-formulario',cursos, name="cursos"),
+    path('pagina-entregable', entregable,name="entregables"),
+    
+    
+]
+ 
 
 
 
