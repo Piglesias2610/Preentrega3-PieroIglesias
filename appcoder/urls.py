@@ -7,7 +7,7 @@ urlpatterns=[
     path('estudiante-formulario', estudiante,name="estudiantes"),
     path('profesor-formulario',profesor,name="profes"),
     path('curso-formulario',cursos, name="cursos"),
-    path('entregable',entregable,name="entregables")
+    path('entregable',agregar_entregable,name="entregables")
     
     
     

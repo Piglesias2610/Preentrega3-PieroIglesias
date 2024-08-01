@@ -24,10 +24,13 @@ def cursos(request):
         curso.save()
         return render(request, "appcoder/inicio.html")
     return render(request,"appcoder/curso_formulario.html")
-
-def entregable(request):
-    return render(request,"appcoder/entregables.html")
-
+def agregar_entregable(request):
+    if request.method == 'POST':
+        entregable=Entregable(nombre = request.POST['nombre'],fecha_entrega = request.POST['fecha_entrega'], entregado = request.POST.get('entregado') == 'on' )
+       
+        entregable.save()
+        return render(request, "appcoder/inicio.html")  
+    return render(request, "appcoder/entregables.html")  
 
 def profesor(request):
    if request.method == 'POST':

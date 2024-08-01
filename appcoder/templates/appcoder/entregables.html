@@ -4,5 +4,20 @@
 {% block titulo %} CoderHouse/Entregables{% endblock %}
 
 {% block  contenidoQueCambia %}
-<h1>Pagina de los entregables</h1>
+<form action="entregable" method="POST">
+    {% csrf_token %}
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" maxlength="30" required>
+    <br><br>
+
+    <label for="fecha_entrega">Fecha de Entrega:</label>
+    <input type="date" id="fecha_entrega" name="fecha_entrega" required>
+    <br><br>
+
+    <label for="entregado">Entregado:</label>
+    <input type="checkbox" id="entregado" name="entregado">
+    <br><br>
+
+    <input type="submit" value="Enviar">
+</form>
 {% endblock %}
