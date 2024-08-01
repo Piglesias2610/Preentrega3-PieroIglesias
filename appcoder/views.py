@@ -6,8 +6,15 @@ from django.shortcuts import HttpResponse
 # Create your views here.
 def inicio(request):
     return render(request,"appcoder/inicio.html")
+
 def estudiante(request):
-    return ("Vista de estudiantes")
+  if request.method == 'POST':
+        estudiante=Estudiante(nombre=request.POST['nombre'],apellido=request.POST['apellido'],email=request.POST['email'])
+        estudiante.save()
+        return render(request, "appcoder/inicio.html")
+  return render(request,"appcoder/estudiante.html")
+  
+
 
 
 
@@ -19,8 +26,7 @@ def cursos(request):
     return render(request,"appcoder/curso_formulario.html")
 
 def entregable(request):
-    return HttpResponse("Vista de los entregables")
-
+    return render(request,"appcoder/entregables.html")
 
 
 def profesor(request):
