@@ -1,0 +1,17 @@
+{% extends 'appCoder/base.html' %}
+
+{% load static %}
+
+{% block titulo %} Inicio {% endblock titulo %}
+
+{% block contenidoQueCambia %}
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ miFormulario.as_table }}
+        </table>
+        <input type="submit" value="Enviar">
+
+    </form>
+{% endblock contenidoQueCambia %}
